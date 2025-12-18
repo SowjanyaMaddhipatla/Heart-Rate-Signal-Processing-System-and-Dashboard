@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Session {{ id }} — Heartbeat</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Session {{ id }}</h1>
+    <p><a href="/">← Back to dashboard</a></p>
+  </header>
+
+  <main>
+    <div class="session-grid">
+      <div class="left">
+        <img src="{{ plot_url }}" alt="Plot" class="large-plot">
+        <p>
+          <a href="{{ orig_url }}">Download original WAV</a> |
+          <a href="{{ filt_url }}">Download filtered WAV</a> |
+          <a href="/session/{{ id }}/download">Download ZIP</a>
+        </p>
+      </div>
+
+   
+    </div>
+  </main>
+
+  <script>
+    function renamePrompt(){
+      const val = document.querySelector('input[name="new_id"]').value;
+      if(!val || val.length < 3){ alert('Enter at least 3 characters for new id'); return false; }
+      return true;
+    }
+  </script>
+</body>
+</html>

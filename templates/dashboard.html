@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Heartbeat Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Heartbeat Dashboard</h1>
+    <!-- <p class="muted">Sessions saved in <code>results/</code></p> -->
+  </header>
+
+  <main>
+    {% if sessions %}
+      <div class="grid">
+        {% for s in sessions %}
+          <div class="card">
+            <h3>Session {{ s.id }}</h3>
+            <p><b>BPM:</b> {{ s.meta.bpm if s.meta.bpm is defined else "N/A" }}</p>
+            <p><b>Duration:</b> {{ s.meta.duration_sec if s.meta.duration_sec is defined else "-" }} s</p>
+            <p><a class="btn" href="/session/{{ s.id }}">View</a>
+               <form class="inline" method="post" action="/session/{{ s.id }}/delete" onsubmit="return confirm('Delete session {{ s.id }}?');">
+                 <button class="btn btn-danger" type="submit">Delete</button>
+               </form>
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No sessions yet.</p>
+    {% endif %}
+    <h2>Upload WAV File</h2>
+  <form action="http://127.0.0.1:8000/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+  </form>
+    <p>Made with 3 @ <link> </link> </p>
+  </main>
+</body>
+</html>

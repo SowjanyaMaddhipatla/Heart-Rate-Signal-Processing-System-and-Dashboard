@@ -1,0 +1,13 @@
+{
+  "Fs": 16000,
+  "duration_sec": 30.0,
+  "threshold": 0.18058400672079578,
+  "raw_peaks": 51,
+  "beats_grouped": 30,
+  "bpm": 60.0,
+  "files": {
+    "original": "original.wav",
+    "filtered": "filtered.wav",
+    "plot": "plot.png"
+  }
+}

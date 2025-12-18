@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #222;
+    background: #f7f9fb;
+}
+
+header h1 {
+    margin: 0;
+    color: #c62828;
+}
+
+.muted {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    width: 220px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #1976d2;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-danger {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.inline {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.large-plot {
+  display: block;              /* Allows margin auto centering */
+  margin: 0 auto;              /* Center horizontally */
+  max-width: 100%;             /* Fit within container width */
+  max-height: 85vh;            /* Fit within screen height */
+  width: auto;                 /* Maintain aspect ratio */
+  height: auto;                /* Maintain aspect ratio */
+  object-fit: contain;         /* Prevent cropping */
+  border-radius: 10px;         /* Optional styling */
+}
+
+.session-grid {
+  display: flex;
+  justify-content: center;      /* Horizontal centering */
+  align-items: center;          /* Vertical centering */
+  flex-direction: column;       /* Stack contents vertically */
+  width: 100%;
+}
+
+
+/* .left {
+    flex: 1 1 60%;
+}
+
+.right {
+    flex: 1 1 35%;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+} */
+
+pre {
+    background: #f4f6f8;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: auto;
+}

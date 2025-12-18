@@ -1,0 +1,13 @@
+{
+  "Fs": 44100,
+  "duration_sec": 60.0,
+  "threshold": 0.2458412369583178,
+  "raw_peaks": 150,
+  "beats_grouped": 75,
+  "bpm": 75.0,
+  "files": {
+    "original": "original.wav",
+    "filtered": "filtered.wav",
+    "plot": "plot.png"
+  }
+}

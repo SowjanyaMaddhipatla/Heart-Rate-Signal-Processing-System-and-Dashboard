@@ -1,0 +1,7 @@
+numpy>=1.25.0
+scipy>=1.11.0
+matplotlib>=3.8.0
+soundfile>=0.12.1
+fastapi>=0.111.0
+jinja2>=3.1.2
+uvicorn>=0.23.2
